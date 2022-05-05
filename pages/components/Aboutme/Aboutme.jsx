@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import image from '../../../public/18824957-removebg.png';
 import Contact from '../UI/Buttons/Contact';
 import { motion } from 'framer-motion';
 import styles from './Aboutme.module.css';
 import { FadeInUp, staggerContainer } from '../../../variants';
+
 function Aboutme() {
+	const states = ['Software', 'WebDev', 'Engineer'];
+	const [introState, setIntroState] = useState('Software');
+
 	return (
 		<div className={styles.aboutme__main_container}>
 			<motion.div
@@ -14,8 +18,18 @@ function Aboutme() {
 				initial='initial'
 				animate='animate'>
 				<h1 className={styles.h1}>
-					<motion.div className={styles.bold} variants={FadeInUp}>
-						Software developer
+					<motion.div
+						className={styles.bold}
+						variants={staggerContainer}
+						initial='initial'
+						animation='animation'>
+						{introState === 'Software'
+							? 'Software developer'
+							: introState === 'WebDev'
+							? ' Web developer'
+							: introState === 'Engineer'
+							? 'Computer engineer'
+							: null}
 					</motion.div>
 					&
 					<motion.div className={styles.bold} variants={FadeInUp}>
