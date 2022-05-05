@@ -1,0 +1,33 @@
+.red {
+	cursor: pointer;
+	color: var(--text-purple);
+}
+.blue {
+	cursor: pointer;
+	color: var(--text-purple);
+}
+.green {
+	cursor: pointer;
+	color: var(--text-purple);
+}
+.yellow {
+	cursor: pointer;
+	color: var(--text-purple);
+}
+
+.red:hover {
+	transform: scale(1.2);
+	color: #ea4335;
+}
+.green:hover {
+	transform: scale(1.2);
+	color: #34a853;
+}
+.blue:hover {
+	transform: scale(1.2);
+	color: #4285f4;
+}
+.yellow:hover {
+	transform: scale(1.2);
+	color: #fbbc05;
+}

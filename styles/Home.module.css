@@ -1,0 +1,7 @@
+.text {
+	color: var(--darkest);
+}
+
+.index__main_container {
+	height: var(--page-height);
+}

@@ -1,0 +1,32 @@
+.aboutme__main_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.aboutme__text_container {
+	width: 40%;
+	margin-left: 10%;
+
+	font-family: var(--main-font-IBM);
+	line-height: 2rem;
+	font-weight: 400;
+	font-size: 1.2rem;
+
+	color: var(--text-purple);
+}
+
+.aboutme__image_container {
+	margin-top: 2%;
+}
+
+.bold {
+	color: var(--text-purple);
+	font-weight: 700;
+}
+
+.h1 {
+	color: var(--text-purple);
+	font-weight: 200;
+}
