@@ -1,5 +1,5 @@
 import React from 'react';
-import Construction from './components/404/Constructing/construction';
+import Construction from './components/404/Constructing/Construction';
 import { motion } from 'framer-motion';
 import styles from '../styles/Blog.module.css';
 

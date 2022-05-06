@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Construction from './components/404/Constructing/construction';
+import Construction from './components/404/Constructing/Construction';
 import styles from '../styles/Portfolio.module.css';
 function portfolio() {
 	return (
