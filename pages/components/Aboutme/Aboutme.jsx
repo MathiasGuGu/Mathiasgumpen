@@ -8,7 +8,7 @@ import { FadeInUp, staggerContainer } from '../../../variants';
 
 function Aboutme() {
 	const states = ['Software', 'WebDev', 'Engineer'];
-	const [introState, setIntroState] = useState('Software');
+	const [introState, setIntroState] = useState(0);
 
 	return (
 		<div className={styles.aboutme__main_container}>
@@ -23,13 +23,13 @@ function Aboutme() {
 						variants={staggerContainer}
 						initial='initial'
 						animation='animation'>
-						{introState === 'Software'
+						{states[introState] === 'Software'
 							? 'Software developer'
-							: introState === 'WebDev'
+							: states[introState] === 'WebDev'
 							? ' Web developer'
-							: introState === 'Engineer'
+							: states[introState] === 'Engineer'
 							? 'Computer engineer'
-							: null}
+							: 'Software developer'}
 					</motion.div>
 					&
 					<motion.div className={styles.bold} variants={FadeInUp}>

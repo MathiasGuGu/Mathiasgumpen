@@ -3,11 +3,13 @@
 	width: 100vw;
 
 	display: flex;
+
+	overflow: -moz-hidden-unscrollable;
 }
 
 .contact__form_container {
 	height: 100%;
-	width: 60%;
+	width: 70%;
 
 	background-color: var(--main-blue);
 
@@ -76,5 +78,13 @@
 }
 
 .contact__art_container {
-	width: 40%;
+	width: 30%;
+}
+
+.contact__art_container svg {
+	position: absolute;
+	right: 9%;
+	bottom: -3%;
+	transform-origin: center;
+	height: 65%;
 }

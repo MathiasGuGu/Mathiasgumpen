@@ -1,4 +1,8 @@
 .portfolio__main_container {
 	height: var(--page-height);
 	width: 100vw;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
