@@ -299,6 +299,7 @@ function Summary({ aboutRef }) {
 					{aboutList.map((word, index) => {
 						return (
 							<motion.div
+								key={index}
 								style={{ margin: '3px' }}
 								initial={{ opacity: 0, y: 20 }}
 								animate={

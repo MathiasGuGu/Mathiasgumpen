@@ -103,7 +103,12 @@ function Aboutme({ contactRef }) {
 				<Contact text={'Send me a message'} onClick={scrollToContact} />
 			</motion.div>
 			<div className={styles.aboutme__image_container}>
-				<Image src={image} width={1100} height={650} />
+				<Image
+					src={image}
+					width={1100}
+					height={650}
+					alt='Image showing design of a computer'
+				/>
 			</div>
 		</div>
 	);
