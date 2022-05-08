@@ -2,10 +2,19 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Aboutme from './components/Aboutme/Aboutme';
-
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+import Portfolio from './components/Portfolio/Portfolio';
+import Whitespace from './components/UI/Whitespace/Whitespace';
+import Summary from './components/Summary/Summary';
+import Navbar from './components/Navbar/Navbar';
 import styles from '../styles/Home.module.css';
+import react, { useRef } from 'react';
 
 export default function Home() {
+	const PortfolioRef = useRef();
+	const ContactRef = useRef();
+	const AboutRef = useRef();
 	return (
 		<>
 			<motion.div className={styles.index__main_container}>
@@ -13,7 +22,7 @@ export default function Home() {
 					initial={{
 						opacity: 1,
 						backgroundColor: '#452f67',
-						zIndex: 200,
+						zIndex: 400,
 						y: '100vh',
 						height: '100px',
 						width: '100vw',
@@ -33,6 +42,9 @@ export default function Home() {
 						],
 						y: '-100vh',
 						position: 'absolute',
+						transition: {
+							duration: 1.5,
+						},
 					}}
 					exit={{
 						opacity: 1,
@@ -48,16 +60,13 @@ export default function Home() {
 						],
 						y: '100vh',
 						position: 'absolute',
-					}}
-					transition={{
-						duration: 1.3,
 					}}></motion.div>
 				<motion.div
 					initial={{
 						opacity: 1,
 						backgroundColor: '#f6b463',
 						y: '100vh',
-						zIndex: 100,
+						zIndex: 300,
 						height: '200px',
 						width: '100vw',
 						position: 'absolute',
@@ -76,16 +85,33 @@ export default function Home() {
 						],
 						y: '-110vh',
 						position: 'absolute',
+						transition: {
+							duration: 1.3,
+						},
 					}}
-					exit={{ opacity: 0 }}
-					transition={{
-						duration: 1.7,
-					}}></motion.div>
+					exit={{ opacity: 0 }}></motion.div>
 				<motion.div
 					initial={{ opacity: 0 }}
-					animate={{ opacity: [0, 0, 0, 0, 0, 1] }}
+					animate={{ opacity: 1 }}
 					transition={{ duration: 1 }}>
-					<Aboutme />
+					<nav>
+						<Navbar
+							aboutRef={AboutRef}
+							portfolioRef={PortfolioRef}
+							contactRef={ContactRef}
+						/>
+					</nav>
+					<main>
+						<Aboutme contactRef={ContactRef} />
+						<Summary aboutRef={AboutRef} />
+						<Whitespace />
+						<Portfolio portfolioRef={PortfolioRef} />
+						<Whitespace />
+						<Contact contactRef={ContactRef} />
+					</main>
+					<footer>
+						<Footer />
+					</footer>
 				</motion.div>
 			</motion.div>
 		</>

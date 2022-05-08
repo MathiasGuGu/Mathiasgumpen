@@ -55,7 +55,7 @@ function Construction() {
 									duration: 0.7,
 									delay: index * 0.1,
 									repeat: Infinity,
-									repeatDelay: 10,
+									repeatDelay: 5,
 								},
 							}}
 							key={word}>

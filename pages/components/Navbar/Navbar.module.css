@@ -4,6 +4,22 @@
 
 	display: flex;
 	align-items: center;
+
+	top: 0%;
+	z-index: 200;
+	position: fixed;
+}
+
+.navbar__main_container_top {
+	width: 100vw;
+	height: 100px;
+
+	display: flex;
+	align-items: center;
+
+	z-index: 1;
+	top: 0%;
+	position: fixed;
 }
 
 .active {
@@ -55,7 +71,9 @@
 .navbar__main_a {
 	color: var(--text-purple);
 }
-
+.navbar__main_a {
+	cursor: pointer;
+}
 .navbar__contact_ul {
 	height: 90%;
 	width: 10%;

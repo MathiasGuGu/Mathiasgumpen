@@ -1,0 +1,6 @@
+.whitespace__container {
+	height: 30vh;
+	width: 100vw;
+
+	background-color: var(--main-blue);
+}

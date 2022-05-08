@@ -34,6 +34,7 @@ export const FadeInUp = {
 		opacity: 1,
 
 		transition: {
+			delay: 0.7,
 			duration: 1,
 			ease: 'easeInOut',
 		},
@@ -59,7 +60,7 @@ export const staggerContainer = {
 	initial: {},
 	animate: {
 		transition: {
-			staggerChildren: 0.7,
+			staggerChildren: 1,
 		},
 	},
 };

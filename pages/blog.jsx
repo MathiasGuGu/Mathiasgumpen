@@ -10,7 +10,7 @@ function blog() {
 				initial={{
 					opacity: 1,
 					backgroundColor: '#452f67',
-					zIndex: 200,
+					zIndex: 400,
 					y: '100vh',
 					height: '100px',
 					width: '100vw',
@@ -54,7 +54,7 @@ function blog() {
 					opacity: 1,
 					backgroundColor: '#f6b463',
 					y: '100vh',
-					zIndex: 100,
+					zIndex: 300,
 					height: '200px',
 					width: '100vw',
 					position: 'absolute',

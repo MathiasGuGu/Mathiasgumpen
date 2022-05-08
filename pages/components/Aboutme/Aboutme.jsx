@@ -5,24 +5,52 @@ import Contact from '../UI/Buttons/Contact';
 import { motion } from 'framer-motion';
 import styles from './Aboutme.module.css';
 import { FadeInUp, staggerContainer } from '../../../variants';
+import { useInView } from 'react-intersection-observer';
 
-function Aboutme() {
+function Aboutme({ contactRef }) {
 	const states = ['Software', 'WebDev', 'Engineer'];
+	const [introList, setIntroList] = useState([]);
+	const [aboutList, setAboutList] = useState([]);
+
+	const [ref, inView] = useInView({
+		threshold: 0.2,
+	});
+
+	const introSentence =
+		'Computer Science and Web-Design Bsc. student. Working part-time, studying full-time. If you want to work with me, send me a message😄';
+
+	const aboutSentence = 'Im a a boy';
+
+	const createWordList = (sentence) => {
+		const wordlist = sentence.split(' ');
+		return wordlist;
+	};
+
+	const scrollToContact = () => {
+		contactRef.current.scrollIntoView({ behavior: 'smooth' });
+	};
+
+	useEffect(() => {
+		setIntroList(createWordList(introSentence));
+		setAboutList(createWordList(aboutSentence));
+	}, []);
+
 	const [introState, setIntroState] = useState(0);
 
 	return (
-		<div className={styles.aboutme__main_container}>
+		<div className={styles.aboutme__main_container} ref={ref}>
 			<motion.div
 				className={styles.aboutme__text_container}
 				variants={staggerContainer}
 				initial='initial'
-				animate='animate'>
-				<h1 className={styles.h1}>
-					<motion.div
-						className={styles.bold}
-						variants={staggerContainer}
-						initial='initial'
-						animation='animation'>
+				animate='animate'
+				ref={ref}>
+				<motion.h1
+					className={styles.h1}
+					variants={staggerContainer}
+					initial='initial'
+					animate='animate'>
+					<motion.div className={styles.bold} variants={FadeInUp}>
 						{states[introState] === 'Software'
 							? 'Software developer'
 							: states[introState] === 'WebDev'
@@ -35,14 +63,44 @@ function Aboutme() {
 					<motion.div className={styles.bold} variants={FadeInUp}>
 						web-designer
 					</motion.div>
-				</h1>
-				<motion.p variants={FadeInUp}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Voluptate tenetur nemo pariatur ut, aut nesciunt,
-					consectetur nostrum veniam similique porro debitis minima.
-				</motion.p>
+				</motion.h1>
+				<p
+					style={{
+						display: 'flex',
+						maxWidth: '800px',
+						flexWrap: 'wrap',
+					}}>
+					{introList.map((word, index) => {
+						return (
+							<motion.div
+								style={{ margin: '3px' }}
+								key={word}
+								initial={{ opacity: 0, y: 10 }}
+								animate={
+									inView
+										? {
+												opacity: 1,
+												y: 0,
+												transition: {
+													delay: index * 0.08,
+												},
+										  }
+										: {
+												opacity: 0,
+												y: 10,
+												transition: {
+													delay: 0,
+													duration: 0.5,
+												},
+										  }
+								}>
+								{word}
+							</motion.div>
+						);
+					})}
+				</p>
 
-				<Contact text={'Send me a message'} />
+				<Contact text={'Send me a message'} onClick={scrollToContact} />
 			</motion.div>
 			<div className={styles.aboutme__image_container}>
 				<Image src={image} width={1100} height={650} />
