@@ -4,7 +4,7 @@ import styles from '../../../styles/Contact.module.css';
 import { FadeInUp, staggerContainer } from '../../../variants';
 import { useInView } from 'react-intersection-observer';
 import mailbox from '../../../public/undraw_mailbox_re_dvds(1).svg';
-function contact({ contactRef }) {
+function Contact({ contactRef }) {
 	const { ref, inView } = useInView({
 		threshold: 0.2,
 	});
@@ -556,4 +556,4 @@ function contact({ contactRef }) {
 	);
 }
 
-export default contact;
+export default Contact;
