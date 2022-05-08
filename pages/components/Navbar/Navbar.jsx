@@ -19,7 +19,7 @@ function Navbar({ portfolioRef, aboutRef, contactRef }) {
 		if (router.asPath === '/blog') {
 			setActive('blog');
 		}
-	}, [asPath]);
+	}, [router.asPath]);
 
 	const [scrollPosition, setScrollPosition] = useState(0);
 	const handleScroll = () => {
