@@ -8,21 +8,25 @@ function Footer() {
 			<div className={styles.footer__links_container}>
 				<div className={styles.footer__links_email}></div>
 				<div className={styles.footer__links_icons}>
-					<Link href=''>
-						<a>
-							<FaGithub />
-						</a>
-					</Link>
-					<Link href=''>
-						<a>
-							<FaLinkedin />
-						</a>
-					</Link>
-					<Link href=''>
-						<a>
-							<FaSlack />
-						</a>
-					</Link>
+					<div>Mathias.g.gundersen@live.no</div>
+					<div>+47 46863632</div>
+					<div>
+						<Link href=''>
+							<a>
+								<FaGithub />
+							</a>
+						</Link>
+						<Link href=''>
+							<a>
+								<FaLinkedin />
+							</a>
+						</Link>
+						<Link href=''>
+							<a>
+								<FaSlack />
+							</a>
+						</Link>
+					</div>
 				</div>
 			</div>
 			<div className={styles.footer__creation_container}>

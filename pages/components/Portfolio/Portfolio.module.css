@@ -8,3 +8,53 @@
 
 	background-color: var(--main-blue);
 }
+
+.portfolio__card_container {
+	width: 95%;
+	height: 90%;
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.card {
+	margin: 10px;
+	height: calc(100% / 2 - 20px);
+	width: calc(100% / 4 - 40px);
+	background-color: white;
+	border-radius: 10px;
+
+	box-shadow: 1px 1px 10px 1px #00000025;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.portfolio__card_image {
+	width: 100%;
+	position: relative;
+	aspect-ratio: 16 / 9;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom: 1px solid #00000025;
+}
+
+.portfolio__card_text {
+	height: auto;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.portfolio__card_links {
+	display: flex;
+}
+
+.portfolio__card_links * {
+	margin-left: 10px;
+}

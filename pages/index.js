@@ -8,13 +8,17 @@ import Portfolio from './components/Portfolio/Portfolio';
 import Whitespace from './components/UI/Whitespace/Whitespace';
 import Summary from './components/Summary/Summary';
 import Navbar from './components/Navbar/Navbar';
+import Techstack from './components/techstack/Techstack';
 import styles from '../styles/Home.module.css';
+import { useInView } from 'react-intersection-observer';
+
 import react, { useRef } from 'react';
 
 export default function Home() {
 	const PortfolioRef = useRef();
 	const ContactRef = useRef();
 	const AboutRef = useRef();
+
 	return (
 		<>
 			<motion.div className={styles.index__main_container}>
@@ -104,6 +108,7 @@ export default function Home() {
 					<main>
 						<Aboutme contactRef={ContactRef} />
 						<Summary aboutRef={AboutRef} />
+						<Techstack />
 						<Whitespace />
 						<Portfolio portfolioRef={PortfolioRef} />
 						<Whitespace />
