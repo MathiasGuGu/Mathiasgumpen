@@ -108,7 +108,6 @@ export default function Home() {
 					<main>
 						<Aboutme contactRef={ContactRef} />
 						<Summary aboutRef={AboutRef} />
-						<Techstack />
 						<Whitespace />
 						<Portfolio portfolioRef={PortfolioRef} />
 						<Whitespace />

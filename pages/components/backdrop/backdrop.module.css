@@ -1,0 +1,19 @@
+.backdrop {
+	width: 100vw;
+	height: 100vh;
+	background-color: #00000025;
+	z-index: 989;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: fixed;
+	top: 0;
+
+	overflow: hidden;
+}
+
+.backdrop:hover {
+	cursor: pointer;
+}

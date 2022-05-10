@@ -20,7 +20,7 @@ function Layout(props) {
 				<nav></nav>
 
 				<main>
-					<AnimatePresence exitBeforeEnter initial={true}>
+					<AnimatePresence exitBeforeEnter initial={false}>
 						{props.children}
 					</AnimatePresence>
 				</main>

@@ -17,9 +17,7 @@ function Aboutme({ contactRef }) {
 	});
 
 	const introSentence =
-		'Computer Science and Web-Design Bsc. student. Working part-time, studying full-time. If you want to work with me, send me a message😄';
-
-	const aboutSentence = 'Im a a boy';
+		'Computer Science and Web-Design Bsc. student. Working part-time, studying full-time.';
 
 	const createWordList = (sentence) => {
 		const wordlist = sentence.split(' ');
@@ -32,7 +30,6 @@ function Aboutme({ contactRef }) {
 
 	useEffect(() => {
 		setIntroList(createWordList(introSentence));
-		setAboutList(createWordList(aboutSentence));
 	}, []);
 
 	const [introState, setIntroState] = useState(0);
@@ -67,8 +64,11 @@ function Aboutme({ contactRef }) {
 				<p
 					style={{
 						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center',
 						maxWidth: '800px',
 						flexWrap: 'wrap',
+						textAlign: 'center',
 					}}>
 					{introList.map((word, index) => {
 						return (
@@ -102,14 +102,6 @@ function Aboutme({ contactRef }) {
 
 				<Contact text={'Send me a message'} onClick={scrollToContact} />
 			</motion.div>
-			<div className={styles.aboutme__image_container}>
-				<Image
-					src={image}
-					width={1100}
-					height={650}
-					alt='Image showing design of a computer'
-				/>
-			</div>
 		</div>
 	);
 }

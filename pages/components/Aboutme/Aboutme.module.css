@@ -3,13 +3,18 @@
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
+	width: 100vw;
 	background-color: var(--main-blue);
 }
 
 .aboutme__text_container {
-	width: 40%;
-	max-width: 600px;
-	margin-left: 10%;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
 	font-family: var(--main-font-IBM);
 	line-height: 2rem;
@@ -19,16 +24,14 @@
 	color: var(--text-purple);
 }
 
-.aboutme__image_container {
-	margin-top: 2%;
-}
-
 .bold {
+	text-align: center;
 	color: var(--text-purple);
 	font-weight: 700;
 }
 
 .h1 {
+	text-align: center;
 	color: var(--text-purple);
 	font-weight: 200;
 }

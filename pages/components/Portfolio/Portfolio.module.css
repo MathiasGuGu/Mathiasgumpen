@@ -1,8 +1,9 @@
 .portfolio__main_container {
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 
@@ -14,31 +15,27 @@
 	height: 90%;
 
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 	flex-wrap: wrap;
 	overflow: hidden;
 }
 
 .card {
 	margin: 10px;
-	height: calc(100% / 2 - 20px);
-	width: calc(100% / 4 - 40px);
+	height: 300px;
+	width: 90%;
 	background-color: white;
-	border-radius: 10px;
-
-	box-shadow: 1px 1px 10px 1px #00000025;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
 
 	display: flex;
-	flex-direction: column;
+
+	border: 1px solid #00000025;
 }
 
-.portfolio__card_image {
-	width: 100%;
-	position: relative;
-	aspect-ratio: 16 / 9;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	border-bottom: 1px solid #00000025;
+.card:hover {
+	box-shadow: 1px 1px 5px #00000025;
 }
 
 .portfolio__card_text {
@@ -51,10 +48,36 @@
 	justify-content: center;
 }
 
+.portfolio__card_image {
+	position: relative;
+	display: flex;
+	width: 100%;
+}
+
 .portfolio__card_links {
 	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 30%;
+	height: 20%;
+	margin: 10px;
 }
 
 .portfolio__card_links * {
-	margin-left: 10px;
+	height: 80%;
+	width: 100%;
+}
+
+.project_info_btn {
+	width: 100px;
+	height: 40px;
+
+	background-color: var(--main-orage);
+
+	border-radius: 10px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

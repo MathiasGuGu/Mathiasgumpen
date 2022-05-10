@@ -3,8 +3,10 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding: 20px;
 
-	height: 20vh;
+	height: 80vh;
+	width: 50vw;
 	background-color: var(--main-turqoise);
 
 	color: var(--text-purple);
@@ -15,8 +17,9 @@
 	width: 100%;
 	height: 100%;
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
 	justify-content: center;
+	align-items: center;
 }
 
 .tech {
