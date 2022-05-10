@@ -36,9 +36,10 @@ function Techstack() {
 	return (
 		<div className={styles.Techstack__main_container}>
 			<div className={styles.Techstack__tech_container}>
-				{stack.map((tech) => {
+				{stack.map((tech, index) => {
 					return (
 						<motion.div
+							key={index}
 							className={styles.tech}
 							whileHover={{
 								scale: 1.2,
