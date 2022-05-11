@@ -22,9 +22,9 @@ function Skills() {
 				</ul>
 			),
 			image: [
-				<SiJavascript></SiJavascript>,
-				<FaHtml5></FaHtml5>,
-				<FaCss3></FaCss3>,
+				{ icon: <SiJavascript></SiJavascript> },
+				{ icon: <FaHtml5></FaHtml5> },
+				{ icon: <FaCss3></FaCss3> },
 			],
 		},
 		{
@@ -39,9 +39,9 @@ function Skills() {
 				</ul>
 			),
 			image: [
-				<SiPrisma></SiPrisma>,
-				<SiGoland></SiGoland>,
-				<SiNodedotjs></SiNodedotjs>,
+				{ icon: <SiPrisma></SiPrisma> },
+				{ icon: <SiGoland></SiGoland> },
+				{ icon: <SiNodedotjs></SiNodedotjs> },
 			],
 		},
 		{
