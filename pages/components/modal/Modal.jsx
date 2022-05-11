@@ -4,6 +4,7 @@ import { FaGithub, FaGlobe } from 'react-icons/fa';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 function Modal({ title, image, url, git, techstack, info }) {
+	console.log(techstack);
 	return (
 		<motion.div
 			initial={{ opacity: 0, y: 100 }}
@@ -29,7 +30,7 @@ function Modal({ title, image, url, git, techstack, info }) {
 					</div>
 					<div className={styles.modal__info_text}>{info}</div>
 					<div className={styles.modal__techstack}>
-						{techstack.map((tech, index) => {
+						{techstack?.map((tech, index) => {
 							return (
 								<motion.div
 									key={index}
