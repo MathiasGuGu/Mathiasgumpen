@@ -11,7 +11,7 @@ function Modal({ title, image, url, git, techstack, info }) {
 				opacity: 1,
 				y: 0,
 				transition: {
-					duration: 0.5,
+					duration: 1,
 				},
 			}}
 			className={styles.modal__modal}>
@@ -31,18 +31,17 @@ function Modal({ title, image, url, git, techstack, info }) {
 					<div className={styles.modal__techstack}>
 						{techstack.map((tech, index) => {
 							return (
-								<div key={index}>
-									<motion.div
-										whileHover={{
-											scale: 1.1,
-											color: 'var(--text-purple)',
-										}}
-										transition={{
-											duration: 0.1,
-										}}>
-										{tech}
-									</motion.div>
-								</div>
+								<motion.div
+									key={index}
+									whileHover={{
+										scale: 1.1,
+										color: 'var(--text-purple)',
+									}}
+									transition={{
+										duration: 0.1,
+									}}>
+									{tech}
+								</motion.div>
 							);
 						})}
 					</div>
