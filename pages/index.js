@@ -14,6 +14,7 @@ import styles from '../styles/Home.module.css';
 import { useInView } from 'react-intersection-observer';
 
 import react, { useRef } from 'react';
+import Hireme from './components/Hire/Hireme';
 
 export default function Home() {
 	const PortfolioRef = useRef();
@@ -111,6 +112,7 @@ export default function Home() {
 						<Summary aboutRef={AboutRef} />
 						<Skills />
 						<Whitespace />
+						<Hireme />
 						<Portfolio portfolioRef={PortfolioRef} />
 						<Whitespace />
 						<Contact contactRef={ContactRef} />

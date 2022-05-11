@@ -1,0 +1,45 @@
+.hireme__main_container {
+	width: 100vw;
+	height: 20vh;
+
+	background-color: var(--main-turqoise);
+
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.hireme__text_container {
+	width: 30%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.hireme__text_container h1 {
+	font-weight: 400;
+}
+.hireme__text_container p {
+	font-weight: 400;
+}
+.hireme__button_container {
+	width: 10%;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hireme__button {
+	background-color: var(--main-orage);
+
+	cursor: pointer;
+
+	border-radius: 6px;
+	width: 120px;
+	height: 60px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
