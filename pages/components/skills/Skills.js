@@ -1,0 +1,105 @@
+import React, { useState } from 'react';
+import { FaReact, FaHtml5, FaCss3, FaGit } from 'react-icons/fa';
+import {
+	SiJavascript,
+	SiTypescript,
+	SiPrisma,
+	SiGoland,
+	SiNodedotjs,
+	SiVuedotjs,
+} from 'react-icons/si';
+import styles from './Skills.module.css';
+function Skills() {
+	const mySkills = [
+		{
+			title: 'Front-end development',
+			body: 'I do front-end development full-time. Mainly in React and NextJs',
+			list: (
+				<ul>
+					<li>Javascript/Typescript</li>
+					<li>Html</li>
+					<li>Css</li>
+				</ul>
+			),
+			image: [
+				<SiJavascript></SiJavascript>,
+				<FaHtml5></FaHtml5>,
+				<FaCss3></FaCss3>,
+			],
+		},
+		{
+			title: 'Back-end development',
+			body: 'I do backend development with different technologies. Eg.',
+			list: (
+				<ul>
+					<li>Go</li>
+					<li>NodeJs</li>
+					<li>MongoDb</li>
+					<li>Sql</li>
+				</ul>
+			),
+			image: [
+				<SiPrisma></SiPrisma>,
+				<SiGoland></SiGoland>,
+				<SiNodedotjs></SiNodedotjs>,
+			],
+		},
+		{
+			title: 'Tools and frameworks',
+			body: 'I use a variety of different tools. Like:',
+			list: (
+				<ul>
+					<li>Git</li>
+					<li>ReactJs</li>
+					<li>NextJs</li>
+					<li>VueJs</li>
+				</ul>
+			),
+			image: [
+				<FaReact></FaReact>,
+				<SiVuedotjs></SiVuedotjs>,
+				<FaGit></FaGit>,
+			],
+		},
+	];
+
+	return (
+		<div className={styles.skills__main_container}>
+			<div className={styles.skills__title}>
+				<h1>My skills</h1>
+			</div>
+			<div className={styles.skills__skill_container}>
+				{mySkills.map((skill) => {
+					return (
+						<div
+							key={skill?.title}
+							className={styles.skills__skill_card}>
+							<div className={styles.skills__card_image}>
+								{skill?.image.map((tech, index) => {
+									return (
+										<div
+											key={index}
+											className={
+												styles.skills__card_tech
+											}>
+											{tech}
+										</div>
+									);
+								})}
+							</div>
+							<div className={styles.skills__card_title}>
+								{skill?.title}
+							</div>
+							<div className={styles.skills__card_body}>
+								<div>{skill?.body}</div>
+								<div>{skill?.list}</div>
+							</div>
+						</div>
+					);
+				})}
+			</div>
+		</div>
+	);
+}
+
+export default Skills;

@@ -9,6 +9,7 @@ import Whitespace from './components/UI/Whitespace/Whitespace';
 import Summary from './components/Summary/Summary';
 import Navbar from './components/Navbar/Navbar';
 import Techstack from './components/techstack/Techstack';
+import Skills from './components/skills/Skills';
 import styles from '../styles/Home.module.css';
 import { useInView } from 'react-intersection-observer';
 
@@ -108,6 +109,7 @@ export default function Home() {
 					<main>
 						<Aboutme contactRef={ContactRef} />
 						<Summary aboutRef={AboutRef} />
+						<Skills />
 						<Whitespace />
 						<Portfolio portfolioRef={PortfolioRef} />
 						<Whitespace />

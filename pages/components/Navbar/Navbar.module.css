@@ -23,16 +23,14 @@
 }
 
 .active {
-	background-color: var(--text-purple);
-	color: white;
 	height: 30px;
 	width: 70px;
-
-	border-radius: 15px;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	border-bottom: 3px solid var(--text-purple);
 }
 
 .navbar__logo_container {

@@ -12,7 +12,7 @@ function Modal({ title, image, url, git, techstack, info }) {
 				opacity: 1,
 				y: 0,
 				transition: {
-					duration: 1,
+					duration: 0.3,
 				},
 			}}
 			className={styles.modal__modal}>
@@ -29,6 +29,9 @@ function Modal({ title, image, url, git, techstack, info }) {
 						<h1>{title}</h1>
 					</div>
 					<div className={styles.modal__info_text}>{info}</div>
+					<div className={styles.modal__tech_title}>
+						Technologies:
+					</div>
 					<div className={styles.modal__techstack}>
 						{techstack?.map((tech, index) => {
 							return (

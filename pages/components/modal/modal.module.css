@@ -71,3 +71,11 @@
 	width: 100%;
 	height: 10%;
 }
+
+.modal__tech_title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 1.2rem;
+}
