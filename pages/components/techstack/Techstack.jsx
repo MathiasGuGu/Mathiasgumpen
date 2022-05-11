@@ -19,18 +19,18 @@ import {
 import styles from './Techstack.module.css';
 function Techstack() {
 	const stack = [
-		<SiJavascript></SiJavascript>,
-		<SiTypescript></SiTypescript>,
-		<SiGoland></SiGoland>,
-		<FaPython></FaPython>,
-		<FaCss3></FaCss3>,
-		<FaHtml5></FaHtml5>,
-		<FaReact></FaReact>,
+		<SiJavascript />,
+		<SiTypescript />,
+		<SiGoland />,
+		<FaPython />,
+		<FaCss3 />,
+		<FaHtml5 />,
+		<FaReact />,
 		<SiPrisma />,
-		<SiVuedotjs></SiVuedotjs>,
-		<FaNodeJs></FaNodeJs>,
-		<FaGit></FaGit>,
-		<FaGithub></FaGithub>,
+		<SiVuedotjs />,
+		<FaNodeJs />,
+		<FaGit />,
+		<FaGithub />,
 	];
 
 	return (
@@ -40,6 +40,7 @@ function Techstack() {
 					return (
 						<div key={index}>
 							<motion.div
+								key={index}
 								className={styles.tech}
 								whileHover={{
 									scale: 1.2,
