@@ -43,7 +43,7 @@ function Portfolio({ portfolioRef }) {
 			image: lasmannenImg,
 			techstack: [<FaReact />, <FaHtml5 />, <FaCss3 />, <SiPrisma />],
 			info: 'The homepage and business site for Laasmannen, A locksmith company. Built with NextJs with Sanity and prisma for the backend. Website is being developed further.',
-			id: 'laasmannen'
+			id: 'laasmannen',
 		},
 	];
 	return (
@@ -81,74 +81,78 @@ function Portfolio({ portfolioRef }) {
 					{cards.map((card, index) => {
 						return (
 							<div key={index}>
-							<motion.div
-								className={styles.card}
-								initial={{ opacity: 0, x: -100 }}
-								animate={
-									inView
-										? {
-												opacity: 1,
-												x: 0,
-												transition: {
-													duration: 0.5,
-													delay: index * 0.3,
-												},
-										  }
-										: { x: -500, opacity: 0 }
-								}>
-								<div className={styles.portfolio__card_image}>
-									<Image
-										src={card.image}
-										layout='fill'
-										alt='Descriptive project image'
-									/>
-								</div>
-								<div className={styles.portfolio__card_text}>
-									<h2 style={{ fontWeight: '400' }}>
-										{card.title && card.title}
-									</h2>
+								<motion.div
+									className={styles.card}
+									initial={{ opacity: 0, x: -100 }}
+									animate={
+										inView
+											? {
+													opacity: 1,
+													x: 0,
+													transition: {
+														duration: 0.5,
+														delay: index * 0.3,
+													},
+											  }
+											: { x: -500, opacity: 0 }
+									}>
 									<div
 										className={
-											styles.portfolio__card_links
+											styles.portfolio__card_image
 										}>
-										<motion.a
-											whileHover={{ scale: 1.1 }}
-											target='_blank'
-											href={card.git}
-											rel='noopener noreferrer'>
-											<FaGithub />
-										</motion.a>
-										<motion.a
-											whileHover={{ scale: 1.1 }}
-											target='_blank'
-											href={card.url}
-											rel='noopener noreferrer'>
-											<FaGlobe />
-										</motion.a>
+										<Image
+											src={card.image}
+											layout='fill'
+											alt='Descriptive project image'
+										/>
 									</div>
-									<motion.div
-										whileHover={{
-											scale: 1.05,
-											cursor: 'pointer',
-										}}
-										className={styles.project_info_btn}
-										onClick={() => {
-											openModal();
-											setCurrentModalInfo({
-												title: card.title,
-												image: card.image,
-												url: card.url,
-												git: card.git,
-												techstack: card.techstack,
-												info: card.info,
-											});
-										}}>
-										More info
-									</motion.div>
-								</div>
-							</motion.div>
+									<div
+										className={styles.portfolio__card_text}>
+										<h2 style={{ fontWeight: '400' }}>
+											{card.title && card.title}
+										</h2>
+										<div
+											className={
+												styles.portfolio__card_links
+											}>
+											<motion.a
+												whileHover={{ scale: 1.1 }}
+												target='_blank'
+												href={card.git}
+												rel='noopener noreferrer'>
+												<FaGithub />
+											</motion.a>
+											<motion.a
+												whileHover={{ scale: 1.1 }}
+												target='_blank'
+												href={card.url}
+												rel='noopener noreferrer'>
+												<FaGlobe />
+											</motion.a>
+										</div>
+										<motion.div
+											whileHover={{
+												scale: 1.05,
+												cursor: 'pointer',
+											}}
+											className={styles.project_info_btn}
+											onClick={() => {
+												openModal();
+												setCurrentModalInfo({
+													title: card.title,
+													image: card.image,
+													url: card.url,
+													git: card.git,
+													techstack: card.techstack,
+													info: card.info,
+												});
+											}}>
+											More info
+										</motion.div>
+									</div>
+								</motion.div>
+							</div>
 						);
-						</div>
 					})}
 				</div>
 			</div>
