@@ -12,22 +12,6 @@ import styles from './Skills.module.css';
 function Skills() {
 	const mySkills = [
 		{
-			title: 'Front-end development',
-			body: 'I do front-end development full-time. Mainly in React and NextJs',
-			list: (
-				<ul>
-					<li>Javascript/Typescript</li>
-					<li>Html</li>
-					<li>Css</li>
-				</ul>
-			),
-			image: [
-				{ icon: <SiJavascript></SiJavascript> },
-				{ icon: <FaHtml5></FaHtml5> },
-				{ icon: <FaCss3></FaCss3> },
-			],
-		},
-		{
 			title: 'Back-end development',
 			body: 'I do backend development with different technologies. Eg.',
 			list: (
@@ -42,6 +26,22 @@ function Skills() {
 				{ icon: <SiPrisma></SiPrisma> },
 				{ icon: <SiGoland></SiGoland> },
 				{ icon: <SiNodedotjs></SiNodedotjs> },
+			],
+		},
+		{
+			title: 'Front-end development',
+			body: 'I do front-end development full-time. Mainly in React and NextJs',
+			list: (
+				<ul>
+					<li>Javascript/Typescript</li>
+					<li>Html</li>
+					<li>Css</li>
+				</ul>
+			),
+			image: [
+				{ icon: <SiJavascript></SiJavascript> },
+				{ icon: <FaHtml5></FaHtml5> },
+				{ icon: <FaCss3></FaCss3> },
 			],
 		},
 		{
