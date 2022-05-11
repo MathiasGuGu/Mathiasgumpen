@@ -81,7 +81,7 @@ function Portfolio({ portfolioRef }) {
 					{cards.map((card, index) => {
 						return (
 							<motion.div
-								key={index}
+								key={card.id}
 								className={styles.card}
 								initial={{ opacity: 0, x: -100 }}
 								animate={

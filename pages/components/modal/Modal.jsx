@@ -29,17 +29,17 @@ function Modal({ title, image, url, git, techstack, info }) {
 					</div>
 					<div className={styles.modal__info_text}>{info}</div>
 					<div className={styles.modal__techstack}>
-						{techstack.map((tech) => {
+						{techstack.map((tech, index) => {
 							return (
 								<motion.div
+									key={index}
 									whileHover={{
 										scale: 1.1,
 										color: 'var(--text-purple)',
 									}}
 									transition={{
 										duration: 0.1,
-									}}
-									key={tech}>
+									}}>
 									{tech}
 								</motion.div>
 							);
