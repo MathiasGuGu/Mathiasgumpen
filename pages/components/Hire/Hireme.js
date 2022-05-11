@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Hireme.module.css';
-function Hireme() {
+function Hireme({ contactRef }) {
+	const scrollToContact = () => {
+		contactRef.current.scrollIntoView({ behavior: 'smooth' });
+	};
 	return (
 		<div className={styles.hireme__main_container}>
 			<div className={styles.hireme__text_container}>
@@ -11,7 +14,8 @@ function Hireme() {
 			<div className={styles.hireme__button_container}>
 				<motion.div
 					className={styles.hireme__button}
-					whileHover={{ scale: 1.05 }}>
+					whileHover={{ scale: 1.05 }}
+					onClick={scrollToContact}>
 					Hire me!
 				</motion.div>
 			</div>

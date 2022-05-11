@@ -112,7 +112,7 @@ export default function Home() {
 						<Summary aboutRef={AboutRef} />
 						<Skills />
 						<Whitespace />
-						<Hireme />
+						<Hireme contactRef={ContactRef} />
 						<Portfolio portfolioRef={PortfolioRef} />
 						<Whitespace />
 						<Contact contactRef={ContactRef} />
