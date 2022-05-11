@@ -43,7 +43,7 @@ function Portfolio({ portfolioRef }) {
 			image: lasmannenImg,
 			techstack: [<FaReact />, <FaHtml5 />, <FaCss3 />, <SiPrisma />],
 			info: 'The homepage and business site for Laasmannen, A locksmith company. Built with NextJs with Sanity and prisma for the backend. Website is being developed further.',
-			id: 'laasmannen',
+			id: 'laasmannen'
 		},
 	];
 	return (
