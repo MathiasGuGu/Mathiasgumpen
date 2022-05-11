@@ -56,9 +56,9 @@ function Skills() {
 				</ul>
 			),
 			image: [
-				<FaReact></FaReact>,
-				<SiVuedotjs></SiVuedotjs>,
-				<FaGit></FaGit>,
+				{ icon: <FaReact></FaReact> },
+				{ icon: <SiVuedotjs></SiVuedotjs> },
+				{ icon: <FaGit></FaGit> },
 			],
 		},
 	];
@@ -82,7 +82,7 @@ function Skills() {
 											className={
 												styles.skills__card_tech
 											}>
-											{tech}
+											{tech.icon}
 										</div>
 									);
 								})}
