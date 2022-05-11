@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Construction from '../404/Constructing/Construction';
 import Modal from '../modal/Modal';
-import Backdrop from '../backdrop/backdrop';
+import Backdrop from '../backdrop/Backdrop';
 import lasmannenImg from '../../../public/projects/Skjermbilde 2022-05-07 kl. 16.31.39.png';
 import { useInView } from 'react-intersection-observer';
 
