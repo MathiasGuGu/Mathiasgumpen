@@ -39,16 +39,17 @@ function Techstack() {
 				{stack.map((tech, index) => {
 					return (
 						<div key={index}>
-							<motion.div
+							<div
 								key={index}
 								className={styles.tech}
-								whileHover={{
-									scale: 1.2,
-									cursor: 'pointer',
-									color: 'black',
-								}}>
+								// whileHover={{
+								// 	scale: 1.2,
+								// 	cursor: 'pointer',
+								// 	color: 'black',
+								// }}>
+							>
 								{tech}
-							</motion.div>
+							</div>
 						</div>
 					);
 				})}
