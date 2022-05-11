@@ -80,8 +80,8 @@ function Portfolio({ portfolioRef }) {
 				<div className={styles.portfolio__card_container} ref={ref}>
 					{cards.map((card, index) => {
 						return (
+							<div key={index}>
 							<motion.div
-								key={card.id}
 								className={styles.card}
 								initial={{ opacity: 0, x: -100 }}
 								animate={
@@ -148,6 +148,7 @@ function Portfolio({ portfolioRef }) {
 								</div>
 							</motion.div>
 						);
+						</div>
 					})}
 				</div>
 			</div>
