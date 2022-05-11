@@ -41,7 +41,12 @@ function Portfolio({ portfolioRef }) {
 			git: 'https://github.com/MathiasGuGu/Lasmannen.no',
 			url: 'https://lasmannen-no.vercel.app/',
 			image: lasmannenImg,
-			techstack: [<FaReact />, <FaHtml5 />, <FaCss3 />, <SiPrisma />],
+			techstack: [
+				{ icon: <FaReact></FaReact> },
+				{ icon: <FaHtml5 /> },
+				{ icon: <FaCss3 /> },
+				{ icon: <SiPrisma /> },
+			],
 			info: 'The homepage and business site for Laasmannen, A locksmith company. Built with NextJs with Sanity and prisma for the backend. Website is being developed further.',
 			id: 'laasmannen',
 		},

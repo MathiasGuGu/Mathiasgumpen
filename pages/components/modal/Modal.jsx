@@ -40,7 +40,7 @@ function Modal({ title, image, url, git, techstack, info }) {
 									transition={{
 										duration: 0.1,
 									}}>
-									{tech}
+									{tech.icon}
 								</motion.div>
 							);
 						})}
