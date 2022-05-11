@@ -16,7 +16,11 @@ function Modal({ title, image, url, git, techstack, info }) {
 			}}
 			className={styles.modal__modal}>
 			<div className={styles.modal__image}>
-				<Image src={image} layout='fill' />
+				<Image
+					src={image}
+					layout='fill'
+					alt='descriptive project image'
+				/>
 			</div>
 			<div className={styles.modal__info_container}>
 				<div className={styles.modal__project_info}>

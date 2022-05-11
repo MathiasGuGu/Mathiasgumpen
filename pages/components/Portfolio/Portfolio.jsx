@@ -97,7 +97,11 @@ function Portfolio({ portfolioRef }) {
 										: { x: -500, opacity: 0 }
 								}>
 								<div className={styles.portfolio__card_image}>
-									<Image src={card.image} layout='fill' />
+									<Image
+										src={card.image}
+										layout='fill'
+										alt='Descriptive project image'
+									/>
 								</div>
 								<div className={styles.portfolio__card_text}>
 									<h2 style={{ fontWeight: '400' }}>
