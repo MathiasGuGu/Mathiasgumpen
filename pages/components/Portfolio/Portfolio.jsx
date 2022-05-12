@@ -18,6 +18,7 @@ import {
 } from 'react-icons/fa';
 import { SiPrisma } from 'react-icons/si';
 import styles from './Portfolio.module.css';
+import Card from './components/Card';
 function Portfolio({ portfolioRef }) {
 	const [ref, inView] = useInView({
 		threshold: 0.2,
@@ -54,106 +55,22 @@ function Portfolio({ portfolioRef }) {
 	return (
 		<>
 			<div
-				className={
-					modalOpen
-						? styles.portfolio__main_container + ' ' + styles.open
-						: styles.portfolio__main_container
-				}
+				className={styles.portfolio__main_container}
 				ref={portfolioRef}>
-				{/* <Construction /> */}
-				{modalOpen && (
-					<Backdrop onClick={modalOpen ? closeModal : openModal}>
-						<Modal
-							title={currentModalInfo.title}
-							image={currentModalInfo.image}
-							url={currentModalInfo.url}
-							git={currentModalInfo.git}
-							techstack={currentModalInfo.techstack}
-							info={currentModalInfo.info}
-						/>
-					</Backdrop>
-				)}
-				<div>
-					<h1
-						style={{
-							color: 'var(--text-purple)',
-							fontWeight: '300',
-						}}>
-						My projects
-					</h1>
-				</div>
-				<div className={styles.portfolio__card_container} ref={ref}>
-					{cards.map((card, index) => {
-						return (
+				<div className={styles.portfolio__projects_container}>
+					<Card
+						left={false}
+						title={'Låsmannen website and business portfolio'}
+						body={'Web-design and development'}
+						button={
 							<motion.div
-								key={index}
-								className={styles.card}
-								initial={{ opacity: 0, x: -100 }}
-								animate={
-									inView
-										? {
-												opacity: 1,
-												x: 0,
-												transition: {
-													duration: 0.5,
-													delay: index * 0.3,
-												},
-										  }
-										: { x: -500, opacity: 0 }
-								}>
-								<div className={styles.portfolio__card_image}>
-									<Image
-										src={card.image}
-										layout='fill'
-										alt='Descriptive project image'
-									/>
-								</div>
-								<div className={styles.portfolio__card_text}>
-									<h2 style={{ fontWeight: '400' }}>
-										{card.title && card.title}
-									</h2>
-									<div
-										className={
-											styles.portfolio__card_links
-										}>
-										<motion.a
-											whileHover={{ scale: 1.1 }}
-											target='_blank'
-											href={card.git}
-											rel='noopener noreferrer'>
-											<FaGithub />
-										</motion.a>
-										<motion.a
-											whileHover={{ scale: 1.1 }}
-											target='_blank'
-											href={card.url}
-											rel='noopener noreferrer'>
-											<FaGlobe />
-										</motion.a>
-									</div>
-									<motion.div
-										whileHover={{
-											scale: 1.05,
-											cursor: 'pointer',
-										}}
-										className={styles.project_info_btn}
-										onClick={() => {
-											openModal();
-											setCurrentModalInfo({
-												title: card.title,
-												image: card.image,
-												url: card.url,
-												git: card.git,
-												techstack: card.techstack,
-												info: card.info,
-											});
-										}}>
-										More info
-									</motion.div>
-								</div>
+								className={styles.laas_button}
+								whileHover={{ scale: 1.06, cursor: 'pointer' }}
+								whileTap={{ scale: 0.9 }}>
+								View more
 							</motion.div>
-						);
-					})}
+						}></Card>
+					<Card left={true}></Card>
 				</div>
 			</div>
 		</>

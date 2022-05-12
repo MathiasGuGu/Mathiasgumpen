@@ -1,0 +1,94 @@
+.main__container {
+	width: 100vw;
+	height: 150px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	background-color: white;
+}
+
+.back {
+	width: 50px;
+	height: 50px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+	top: 50;
+	left: 50px;
+}
+
+.back_icon {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.back_icon > * {
+	height: 100%;
+	width: 100%;
+}
+.back_icon > *:hover {
+	color: var(--main-orage);
+}
+
+.nav_logo {
+	width: 20%;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav_logo h1 {
+	font-size: 1.8rem;
+	font-weight: 200;
+}
+
+.searchbar {
+	width: 40%;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.search {
+	background-color: var(--main-blue);
+	width: 80%;
+	height: 35%;
+
+	padding: 20px;
+
+	border: 1px solid #00000025;
+	border-radius: 15px;
+
+	outline: none;
+}
+
+.credentials {
+	width: 20%;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.credentials div {
+	font-size: 1.3rem;
+	font-weight: 200;
+}
+
+.credentials div:hover {
+	cursor: pointer;
+	border-bottom: 3px solid var(--main-orage);
+}

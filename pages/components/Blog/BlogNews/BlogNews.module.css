@@ -1,0 +1,20 @@
+.main__container {
+	height: 100%;
+	width: 25vw;
+	background-color: white;
+	padding: 10px;
+}
+
+.news__container {
+	width: 80%;
+	height: 70%;
+	margin: auto;
+
+	border: 1px solid #00000025;
+
+	background-color: var(--main-blue);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

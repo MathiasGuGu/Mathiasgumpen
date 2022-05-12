@@ -114,7 +114,6 @@ export default function Home() {
 						<Whitespace />
 						<Hireme contactRef={ContactRef} />
 						<Portfolio portfolioRef={PortfolioRef} />
-						<Whitespace />
 						<Contact contactRef={ContactRef} />
 					</main>
 					<footer>

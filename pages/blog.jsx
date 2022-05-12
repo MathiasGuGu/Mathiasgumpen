@@ -1,12 +1,17 @@
 import React from 'react';
 import Construction from './components/404/Constructing/Construction';
 import { motion } from 'framer-motion';
+import Layout from './components/Blog/Layout/Layout';
+
+import BlogpostBoard from './components/Blog/BlogPosts/BlogpostBoard';
+import BlogTags from './components/Blog/BlogTags/BlogTags';
+import BlogNews from './components/Blog/BlogNews/BlogNews';
 import styles from '../styles/Blog.module.css';
 
 function blog() {
 	return (
 		<>
-			<motion.div
+			{/* <motion.div
 				initial={{
 					opacity: 1,
 					backgroundColor: '#452f67',
@@ -77,9 +82,14 @@ function blog() {
 				exit={{ opacity: 0 }}
 				transition={{
 					duration: 1.7,
-				}}></motion.div>
+				}}></motion.div> */}
 			<div className={styles.blog__main_container}>
-				<Construction />
+				<Layout>
+					<BlogTags />
+					<BlogpostBoard />
+					<BlogNews />
+				</Layout>
+				{/* <Construction /> */}
 			</div>
 		</>
 	);

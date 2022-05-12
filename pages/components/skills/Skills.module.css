@@ -1,5 +1,6 @@
 .skills__main_container {
-	height: 50vh;
+	padding-top: 100px;
+	height: 60vh;
 
 	display: flex;
 	flex-direction: column;
@@ -12,6 +13,7 @@
 .skills__title h1 {
 	font-size: 2rem;
 	font-weight: 300;
+	padding-bottom: 50px;
 	color: var(--text-purple);
 }
 
@@ -24,20 +26,23 @@
 	justify-content: center;
 }
 .skills__skill_card:nth-child(2n) {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+}
+.skills__skill_card:first-child {
+	margin-top: 50px;
+}
+.skills__skill_card:nth-child(3n) {
+	margin-top: 50px;
 }
 .skills__skill_card:nth-child(1n):hover {
-	box-shadow: 1px 1px 10px hsla(5, 81%, 56%, 0.404);
 }
 .skills__skill_card:nth-child(2n):hover {
-	box-shadow: 1px 1px 10px hsla(217, 89%, 61%, 0.4);
 }
 .skills__skill_card:nth-child(3n):hover {
-	box-shadow: 1px 1px 10px hsla(45, 97%, 50%, 0.5);
 }
 
 .skills__skill_card {
-	height: 90%;
+	height: 100%;
 	width: calc(100% / 3 - 100px);
 	margin-inline: 25px;
 
@@ -83,7 +88,8 @@
 }
 
 .skills__card_body {
-	padding: 20px;
+	padding-inline: 55px;
+	padding-top: 30px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

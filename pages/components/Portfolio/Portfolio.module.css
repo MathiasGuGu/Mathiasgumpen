@@ -1,83 +1,125 @@
 .portfolio__main_container {
 	width: 100vw;
 	min-height: 100vh;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	height: auto;
 
 	background-color: var(--main-blue);
-}
 
-.portfolio__card_container {
-	width: 95%;
-	height: 90%;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.card {
-	margin: 10px;
-	height: 300px;
-	width: 90%;
-	background-color: white;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-
-	display: flex;
-
-	border: 1px solid #00000025;
-}
-
-.card:hover {
-	box-shadow: 1px 1px 5px #00000025;
-}
-
-.portfolio__card_text {
-	height: auto;
-	width: 100%;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.portfolio__card_image {
 	position: relative;
-	display: flex;
-	width: 100%;
 }
 
-.portfolio__card_links {
+.portfolio__projects_container {
+	width: 50%;
+	min-height: 80vh;
+	height: auto;
+
+	padding: 50px;
+
+	margin-inline: auto;
+}
+
+.portfolio__projects_card {
+	height: 50vh;
+	aspect-ratio: 16 / 10;
+
+	margin-inline: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	border-radius: 15px;
+
+	background-color: aqua;
+
+	display: flex;
+
+	box-shadow: 1px 1px 20px 1px #00000010;
+}
+
+.card__text_container {
+	background-color: white;
+
+	width: 50%;
+	height: 100%;
+
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+
+	padding: 50px;
+
+	box-shadow: inset 1px 1px 30px 1px #00000008;
+}
+.card__text_left_container {
+	background-color: white;
+
+	width: 50%;
+	height: 100%;
+
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+
+	padding: 50px;
+
+	box-shadow: inset 1px 1px 30px 1px #00000008;
+}
+
+.card__image_container {
+	width: 50%;
+	height: 100%;
+
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+
+	position: relative;
+	box-shadow: inset 1px 1px 10px 1px #00000020;
+}
+.card__image_left_container {
+	width: 50%;
+	height: 100%;
+
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+
+	position: relative;
+	box-shadow: inset 1px 1px 10px 1px #00000020;
+}
+
+.card__image {
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.card__image_left {
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+.card__title {
+	font-size: 2rem;
+	font-weight: 400;
+	color: var(--text-purple);
+}
+.card__body {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-size: 0.8rem;
+	font-weight: 300;
+	color: rgb(162, 170, 172);
+}
+
+.laas_button {
+	width: 150px;
+	aspect-ratio: 16 / 4;
+	border-radius: 15px;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	width: 30%;
-	height: 20%;
-	margin: 10px;
-}
+	box-shadow: 1px 1px 20px 1px rgb(144, 255, 144);
 
-.portfolio__card_links * {
-	height: 80%;
-	width: 100%;
-}
+	background-color: rgb(144, 255, 144);
 
-.project_info_btn {
-	width: 100px;
-	height: 40px;
-
-	background-color: var(--main-orage);
-
-	border-radius: 10px;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	font-size: 1rem;
+	font-weight: 300;
+	color: var(--text-purple);
 }

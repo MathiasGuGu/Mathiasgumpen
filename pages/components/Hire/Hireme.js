@@ -8,7 +8,7 @@ function Hireme({ contactRef }) {
 	return (
 		<div className={styles.hireme__main_container}>
 			<div className={styles.hireme__text_container}>
-				<h1>Want to hire me?</h1>
+				<h1>Want to work with me?</h1>
 				<p>Send me a message, and I will get the work done.</p>
 			</div>
 			<div className={styles.hireme__button_container}>
@@ -16,7 +16,7 @@ function Hireme({ contactRef }) {
 					className={styles.hireme__button}
 					whileHover={{ scale: 1.05 }}
 					onClick={scrollToContact}>
-					Hire me!
+					Message me
 				</motion.div>
 			</div>
 		</div>

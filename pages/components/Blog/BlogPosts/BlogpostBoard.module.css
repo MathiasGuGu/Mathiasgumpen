@@ -1,0 +1,29 @@
+.main__container {
+	width: 50%;
+	height: 100%;
+
+	background-color: white;
+
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.blogpost__outline {
+	width: 95%;
+	height: auto;
+
+	border: 1px solid #00000025;
+	border-radius: 10px;
+	background-color: var(--main-blue);
+
+	margin: auto;
+	margin-top: 20px;
+}
+
+.featured {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-weight: 300;
+}
