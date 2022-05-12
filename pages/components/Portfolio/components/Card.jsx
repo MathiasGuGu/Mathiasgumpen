@@ -18,6 +18,7 @@ function Card({ title, body, button, left }) {
 							src={logo}
 							layout='fill'
 							className={styles.card__image}
+							alt='project image'
 						/>
 					</div>
 				</>
@@ -28,6 +29,7 @@ function Card({ title, body, button, left }) {
 							src={logo}
 							layout='fill'
 							className={styles.card__image_left}
+							alt='project image'
 						/>
 					</div>
 					<div className={styles.card__text_left_container}>

@@ -19,7 +19,11 @@ function Post() {
 			</div>
 			<div className={styles.post__post_container}>
 				<div className={styles.post__image_container}>
-					<Image src={testImage} layout='fill' />
+					<Image
+						src={testImage}
+						layout='fill'
+						alt='blog post header image'
+					/>
 				</div>
 				<h1>{title.post}</h1>
 				<div className={styles.post__text_container}>
