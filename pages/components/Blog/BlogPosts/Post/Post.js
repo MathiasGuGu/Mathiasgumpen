@@ -11,6 +11,7 @@ function Post({ title, image, summary, short }) {
 							className={styles.img}
 							src={image}
 							layout='fill'
+							alt='post image'
 						/>
 					)}
 				</div>
