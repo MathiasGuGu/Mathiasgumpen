@@ -57,6 +57,10 @@ function Portfolio({ portfolioRef }) {
 			<div
 				className={styles.portfolio__main_container}
 				ref={portfolioRef}>
+				<div className={styles.portfolio__title}>
+					<h1>My projects</h1>
+				</div>
+
 				<div className={styles.portfolio__projects_container}>
 					<Card
 						left={false}

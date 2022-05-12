@@ -1,22 +1,27 @@
 .hireme__main_container {
-	width: 100vw;
+	width: 80vw;
 	height: 30vh;
+	margin-left: auto;
+
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 
-	background-color: var(--main-blue);
+	background-color: var(--main-turqoise);
 }
 .hireme__text_container {
-	width: 30%;
+	width: 100vw;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
+
 .hireme__text_container h1 {
 	font-weight: 400;
 	color: var(--text-purple);
@@ -49,7 +54,7 @@
 
 	font-size: 1rem;
 	font-weight: 300;
-	color: black;
+	color: #00000080;
 
 	box-shadow: 1px 1px 10px 1px rgb(255, 183, 49);
 }
