@@ -12,7 +12,7 @@ function Summary({ aboutRef }) {
 	});
 
 	const aboutSentence =
-		'My name is Mathias. I am a Computer Science and Web-development Bsc. Student. I am currently studying full-time, and I am looking for som projects to do in my free-time. If you want to hire me send me a message.';
+		'My name is Mathias. I am a Computer Science and Web-development Bsc. Student. I am currently studying full-time, and I am looking for some projects to do in my free-time. If you want to hire me send me a message.';
 
 	const createWordList = (sentence) => {
 		const wordlist = sentence.split(' ');
