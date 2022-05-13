@@ -13,6 +13,8 @@
 	justify-content: center;
 
 	background-color: var(--main-turqoise);
+
+	box-shadow: 1px 1px 40px 1px hsl(177, 100%, 72%);
 }
 .hireme__text_container {
 	width: 50%;

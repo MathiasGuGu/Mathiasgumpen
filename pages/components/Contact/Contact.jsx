@@ -13,7 +13,7 @@ function Contact({ contactRef }) {
 	return (
 		<>
 			<motion.div className={styles.contact__main_container}>
-				<motion.div
+				{/* <motion.div
 					className={styles.contact__form_container}
 					ref={contactRef}>
 					<motion.form
@@ -550,7 +550,7 @@ function Contact({ contactRef }) {
 						</motion.svg>
 						<circle cx='203.27678' cy='189' r='7' fill='#fff' />
 					</motion.svg>
-				</motion.div>
+				</motion.div> */}
 			</motion.div>
 		</>
 	);

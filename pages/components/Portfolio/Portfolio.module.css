@@ -32,7 +32,7 @@
 
 .portfolio__projects_card {
 	height: 50vh;
-	aspect-ratio: 16 / 10;
+	aspect-ratio: 16 / 8.5;
 
 	margin-inline: auto;
 	margin-top: 50px;

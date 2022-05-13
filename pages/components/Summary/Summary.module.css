@@ -10,6 +10,8 @@
 
 	border-top-right-radius: 30px;
 	border-bottom-right-radius: 30px;
+
+	box-shadow: 1px 1px 40px 1px hsl(177, 100%, 72%);
 }
 
 .summary__text_container {
